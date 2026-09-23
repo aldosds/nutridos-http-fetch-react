@@ -1,16 +1,74 @@
-# React + Vite
+# 🥗 Nutridos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **Nutridos** é uma aplicação web desenvolvida em React para listar posts, dicas e artigos focados em nutrição, emagrecimento e saúde. O projeto consome dados de uma API externa em tempo real e os renderiza na tela de forma limpa, responsiva e dinâmica.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 Demonstração do Projeto
 
-## React Compiler
+![Demonstração do Nutridos](./src/assets/nutridos.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias e Recursos Utilizados
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+O projeto foi construído utilizando o ecossistema moderno do React, estilização nativa e boas práticas de consumo de dados:
+
+- **React + Vite**: Ferramenta de build extremamente rápida para criar e gerenciar a estrutura do projeto.
+- **CSS Puro (CSS3)**: Estilização customizada e responsiva feita do zero, sem o uso de frameworks externos.
+- **useState**: Hook do React utilizado para armazenar e gerenciar a lista de posts recebida da API.
+- **useEffect**: Hook utilizado para controlar o ciclo de vida do componente e disparar a requisição HTTP assim que a página é carregada.
+- **HTTP & Fetch API**: Método nativo do JavaScript utilizado para consumir os dados de forma assíncrona.
+- **Método `.map()`**: Função de array que percorre os objetos retornados e renderiza dinamicamente a estrutura de cada post.
+
+---
+
+## 🔌 API Consumida
+
+Os dados exibidos na aplicação são consumidos a partir do seguinte endpoint:
+
+- **URL da API:** `https://sujeitoprogramador.com/rn-api/?api=posts`
+
+### Exemplo de estrutura dos dados recebidos:
+
+```json
+{
+  "id": 1,
+  "titulo": "Refeições proteicas para fazer antes de dormir",
+  "capa": "https://sujeitoprogramador.com...",
+  "subtitulo": "O que acontece com nossos músculos quando estamos dormindo...",
+  "categoria": "Dieta"
+}
+```
+
+---
+
+## 🚀 Como Executar o Projeto
+
+Siga os passos abaixo para rodar a aplicação localmente:
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com
+   ```
+
+2. Entre na pasta do projeto:
+
+   ```bash
+   cd nutridos
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Abra o navegador no endereço indicado pelo Vite (geralmente `http://localhost:5173`).
