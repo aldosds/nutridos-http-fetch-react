@@ -25,6 +25,19 @@ function App() {
       <header>
         <strong>Nutridos</strong>
       </header>
+
+      {nutri.map((item) => {
+        return (
+          <article key={item.id} className="post">
+            <strong className="titulo">{item.titulo}</strong>
+            <img className="capa" src={item.capa} alt={item.titulo} />
+            <p className="subtitulo">{item.subtitulo}</p>
+            <a href="#" className="botao">
+              Acessar
+            </a>
+          </article>
+        );
+      })}
     </div>
   );
 }
